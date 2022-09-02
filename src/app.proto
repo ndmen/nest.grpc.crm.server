@@ -3,7 +3,8 @@ syntax = "proto3";
 package app;
 
 service UsersService {
-    rpc FindOne (UserById) returns (User) {}
+    rpc FindOne (UserById) returns (User);
+    rpc FindMany (stream UserById) returns (stream User);
 }
 
 message UserById {
